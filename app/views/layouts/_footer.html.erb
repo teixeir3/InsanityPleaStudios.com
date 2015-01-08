@@ -1,0 +1,30 @@
+<footer class="footer">
+  
+  <div class="copyright left">
+  	<a href="http://www.AyosInformatics.com/">
+  		<img src="/assets/ayos_final_100x50.gif" alt="Ayos Informatics">
+    </a>
+    <small>© Ayos Informatics, LLC 2014</small>
+  </div>
+  
+  <div class="right">
+    <a class="address" href="<%= page_path("directions") %>">
+    	<ul>
+        <li>3461 Route 22 East</li>
+        <li>(Corner of County Line Rd.)</li>
+        <li>Branchburg NJ 08876</li>
+    	  <li>(908) 595-0400</li>
+      	<li>Fax (908) 595-0410</li>
+      </ul>
+    </a>
+  </div>
+  
+  <div class="params group">
+    <%  if Rails.env.development? %>
+      <%= debug(params) %>
+      <pre>This page was loaded on <strong><%=l Time.now, format: "%k:%M:%S:%L" %></strong></pre>
+      <pre>return_url: <strong><%= session[:return_url] %></strong></pre>
+    <% end %>
+  </div>
+  
+</footer>

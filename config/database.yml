@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  database: weight_loss_dev
+  host: localhost
+  username: Doug
+  password: ENV['DEVELOPER_PASSWORD']
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  database: weight_loss_test
+  host: localhost
+  username: Doug
+  password: ENV['DEVELOPER_PASSWORD']

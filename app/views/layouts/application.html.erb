@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WeightLoss</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= filepicker_js_include_tag %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <!-- Begin modal content. ********************************************************* -->
+    <%= render "layouts/spinner" %>
+    <%= render "application/modal" %>
+  <!-- End modal content. ********************************************************* -->
+  
+  <!-- Begin header. ********************************************************* -->
+    <%= render "layouts/header" %>
+
+  <!-- End header. *********************************************************** -->
+  
+  <!-- Begin Notification Area. *********************************************** -->
+  
+    <%= render "layouts/messages", messages_arr: flash[:notices], class_name: "notices" if flash[:notices] %>
+    <%= render "layouts/messages", messages_arr: flash[:errors], class_name: "errors" if flash[:errors] %>
+  
+  <!-- End Notification Area. ************************************************* -->
+  
+  
+
+  <!-- Begin standard content. *********************************************** -->
+  <main class="content">
+  	<%= yield %>
+    <%= yield :js %>
+  </main>
+  <!-- End standard content. ************************************************* -->
+
+  <!-- Begin footer. ********************************************************* -->
+    <%= render "layouts/footer" %>
+  <!-- End footer. *********************************************************** -->
+</body>
+</html>
