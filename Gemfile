@@ -29,6 +29,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'high_voltage'
 
+gem 'bootstrap-sass'
+
 gem 'paperclip', "~> 4.1"
 gem 'aws-sdk'
 gem 'rails-gallery'
@@ -41,6 +43,7 @@ gem 'newrelic_rpm'
 gem 'filepicker-rails'
 gem 'kaminari'
 gem 'pg_search'
+gem 'simple_form'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -1,0 +1,11 @@
+<% content_for :body_class do "has-active-modal" end %>
+<section class="modal">
+  <article class="modal-box">
+    <span class="modal-close-button">&times;</span>
+    
+    <div id="modal-container">
+      <!-- Insert Content Here -->
+      <%= yield :modal %>
+    </div>
+  </article>
+</section>

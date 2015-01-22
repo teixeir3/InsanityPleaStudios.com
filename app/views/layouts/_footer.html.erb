@@ -10,11 +10,9 @@
   <div class="right">
     <a class="address" href="<%= page_path("directions") %>">
     	<ul>
-        <li>3461 Route 22 East</li>
-        <li>(Corner of County Line Rd.)</li>
-        <li>Branchburg NJ 08876</li>
-    	  <li>(908) 595-0400</li>
-      	<li>Fax (908) 595-0410</li>
+        <% 0.upto(ENV["ADRESS_LINE_COUNT"].to_i) do |i| %>
+          <li><%= ENV["ADDRESS_#{i}"] %></li>
+        <% end %>
       </ul>
     </a>
   </div>

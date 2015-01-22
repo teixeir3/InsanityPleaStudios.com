@@ -17,7 +17,7 @@ module WeightLoss
     config.time_zone = 'Eastern Time (US & Canada)'
     
     config.filepicker_rails.api_key = ENV['FILEPICKER_KEY']
-    
+    config.filepicker_rails.secret_key = ENV["FILEPICKER_SECRET_KEY"]
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
