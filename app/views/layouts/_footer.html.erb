@@ -1,28 +1,28 @@
-<footer class="footer">
+<footer>
+  <nav class="footer navbar navbar-inverse">
+    <div class="container">  
+      <div class="copyright left">
+      	<a href="http://www.AyosInformatics.com/"><img src="/assets/ayos_final_100x50_5.png" alt="Ayos Informatics"></a>
+        <small>© Ayos Informatics, LLC 2014</small>
+      </div>
   
-  <div class="copyright left">
-  	<a href="http://www.AyosInformatics.com/">
-  		<img src="/assets/ayos_final_100x50.gif" alt="Ayos Informatics">
-    </a>
-    <small>© Ayos Informatics, LLC 2014</small>
-  </div>
+      <div class="right">
+        <a class="address" href="<%= page_path("directions") %>">
+        	<ul>
+            <% 0.upto(ENV["ADRESS_LINE_COUNT"].to_i) do |i| %>
+              <li><%= ENV["ADDRESS_#{i}"] %></li>
+            <% end %>
+          </ul>
+        </a>
+      </div>
   
-  <div class="right">
-    <a class="address" href="<%= page_path("directions") %>">
-    	<ul>
-        <% 0.upto(ENV["ADRESS_LINE_COUNT"].to_i) do |i| %>
-          <li><%= ENV["ADDRESS_#{i}"] %></li>
+      <div class="params group">
+        <%  if Rails.env.development? %>
+          <%= debug(params) %>
+          <pre>This page was loaded on <strong><%=l Time.now, format: "%k:%M:%S:%L" %></strong></pre>
+          <pre>return_url: <strong><%= session[:return_url] %></strong></pre>
         <% end %>
-      </ul>
-    </a>
-  </div>
-  
-  <div class="params group">
-    <%  if Rails.env.development? %>
-      <%= debug(params) %>
-      <pre>This page was loaded on <strong><%=l Time.now, format: "%k:%M:%S:%L" %></strong></pre>
-      <pre>return_url: <strong><%= session[:return_url] %></strong></pre>
-    <% end %>
-  </div>
-  
+      </div>
+    </div>
+  </nav>
 </footer>

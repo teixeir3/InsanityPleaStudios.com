@@ -1,4 +1,6 @@
 WeightLoss::Application.routes.draw do
+  resources :users
+
   resource :session, only: [:create, :destroy, :new]
   resources :users do
     get :activate, on: :collection

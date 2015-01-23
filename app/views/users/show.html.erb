@@ -1,0 +1,159 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Is admin:</strong>
+  <%= @user.is_admin %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @user.password_digest %>
+</p>
+
+<p>
+  <strong>Session token:</strong>
+  <%= @user.session_token %>
+</p>
+
+<p>
+  <strong>Password reset token:</strong>
+  <%= @user.password_reset_token %>
+</p>
+
+<p>
+  <strong>Password reset sent at:</strong>
+  <%= @user.password_reset_sent_at %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @user.is_active %>
+</p>
+
+<p>
+  <strong>Activation token:</strong>
+  <%= @user.activation_token %>
+</p>
+
+<p>
+  <strong>Uid:</strong>
+  <%= @user.uid %>
+</p>
+
+<p>
+  <strong>Access token:</strong>
+  <%= @user.access_token %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @user.provider %>
+</p>
+
+<p>
+  <strong>Oauth token:</strong>
+  <%= @user.oauth_token %>
+</p>
+
+<p>
+  <strong>Oauth expires at:</strong>
+  <%= @user.oauth_expires_at %>
+</p>
+
+<p>
+  <strong>Fb image url:</strong>
+  <%= @user.fb_image_url %>
+</p>
+
+<p>
+  <strong>Display:</strong>
+  <%= @user.display %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @user.position %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @user.title %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @user.string %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @user.bio %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <strong>Work phone:</strong>
+  <%= @user.work_phone %>
+</p>
+
+<p>
+  <strong>Home phone:</strong>
+  <%= @user.home_phone %>
+</p>
+
+<p>
+  <strong>Mobile phone:</strong>
+  <%= @user.mobile_phone %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @user.fax %>
+</p>
+
+<p>
+  <strong>Timezone:</strong>
+  <%= @user.timezone %>
+</p>
+
+<p>
+  <strong>Avatar file name:</strong>
+  <%= @user.avatar_file_name %>
+</p>
+
+<p>
+  <strong>Avatar content type:</strong>
+  <%= @user.avatar_content_type %>
+</p>
+
+<p>
+  <strong>Avatar file size:</strong>
+  <%= @user.avatar_file_size %>
+</p>
+
+<p>
+  <strong>Avatar updated at:</strong>
+  <%= @user.avatar_updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

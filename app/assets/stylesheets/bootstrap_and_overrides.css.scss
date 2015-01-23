@@ -1,0 +1,105 @@
+// Set the correct sprite paths
+$iconSpritePath: image-path('glyphicons-halflings.png');
+$iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
+
+$navbarBackground: #555;
+$navbarBackgroundHighlight: #888;
+$navbarText: #eee;
+$navbarLinkColor: #eee;
+
+@import "bootstrap";
+
+body { padding: 20px; }
+
+//@import "bootstrap-responsive";
+
+.navbar-brand > img {
+  position: relative;
+  top: -14px;
+  left: -4px;
+}
+
+main {
+  padding-top: 147px;
+}
+#site-slogan {
+  font-size: 15px;
+  text-align: center;
+}
+
+#logo {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#logo > a:hover, .copyright > a:hover {
+  background: transparent; 
+}
+
+a { text-decoration: none; }
+
+ul, li { list-style-type: none; }
+
+footer {
+  padding: 20px 0px;
+}
+
+.footer {
+  padding: 20px 0px;
+}
+
+#logo-nav {
+  margin-bottom: 0px;
+}
+
+.main-nav {
+  //top: -187px;
+  left: -95px;
+  position: relative;
+  transition:all 1s;
+  -moz-transition:all 0.8s ease-in;
+  -o-transition:all 0.8s ease-in;
+  -webkit-transition:all 0.8s ease-in;
+  transition:all 0.8s ease-in;
+}
+
+.collapsed .main-nav {
+  left: 0px;
+}
+
+header {
+  transition:all 1s;
+  transition:all 1s;
+  -webkit-transition:all 1s;
+  -moz-transition:all 1s;
+  -o-transition:all 1s;
+}
+body{
+  transition:all 1s;
+  -webkit-transition:all 1s;
+  -moz-transition:all 1s;
+  -o-transition:all 1s;
+}
+.collapsed {
+  transition:all 1s;
+  top: -87px;
+}
+//.collapsed .logo {
+//  display: none;
+//  -moz-transition:all 0.8s ease-in;
+//  -o-transition:all 0.8s ease-in;
+//  -webkit-transition:all 0.8s ease-in;
+//  transition:all 0.8s ease-in;
+//}
+
+.collapsed .header {
+  top: -87px;
+}
+
+.collapsed .navbar-brand {
+  display: block;
+  -moz-transition:all 0.3s ease-in;
+  -o-transition:all 0.3s ease-in;
+  -webkit-transition:all 0.3s ease-in;
+  transition:all 0.3s ease-in;
+}

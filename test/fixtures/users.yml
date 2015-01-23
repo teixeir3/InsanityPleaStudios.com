@@ -1,47 +1,67 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id                     :integer          not null, primary key
-#  email                  :string(255)      not null
-#  first_name             :string(255)
-#  last_name              :string(255)
-#  is_admin               :boolean          default(FALSE), not null
-#  password_digest        :string(255)      not null
-#  session_token          :string(255)      not null
-#  password_reset_token   :string(255)
-#  password_reset_sent_at :datetime
-#  is_active              :boolean          default(FALSE), not null
-#  activation_token       :string(255)      default("INACTIVE"), not null
-#  uid                    :string(255)
-#  access_token           :string(255)
-#  provider               :string(255)
-#  position               :integer
-#  title                  :string(255)
-#  string                 :string(255)
-#  bio                    :text
-#  phone                  :string(255)
-#  work_phone             :string(255)
-#  home_phone             :string(255)
-#  mobile_phone           :string(255)
-#  fax                    :string(255)
-#  timezone               :string(255)      default("Eastern Time (US & Canada)"), not null
-#  created_at             :datetime
-#  updated_at             :datetime
-#  avatar_file_name       :string(255)
-#  avatar_content_type    :string(255)
-#  avatar_file_size       :integer
-#  avatar_updated_at      :datetime
-#
-
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+one:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  is_admin: false
+  password_digest: MyString
+  session_token: MyString
+  password_reset_token: MyString
+  password_reset_sent_at: 2015-01-22 15:38:46
+  is_active: false
+  activation_token: MyString
+  uid: MyString
+  access_token: MyString
+  provider: MyString
+  oauth_token: MyString
+  oauth_expires_at: 2015-01-22 15:38:46
+  fb_image_url: MyString
+  display: false
+  position: 1
+  title: MyString
+  string: MyString
+  bio: MyText
+  phone: MyString
+  work_phone: MyString
+  home_phone: MyString
+  mobile_phone: MyString
+  fax: MyString
+  timezone: MyString
+  avatar_file_name: MyString
+  avatar_content_type: MyString
+  avatar_file_size: 1
+  avatar_updated_at: 2015-01-22 15:38:46
+
+two:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  is_admin: false
+  password_digest: MyString
+  session_token: MyString
+  password_reset_token: MyString
+  password_reset_sent_at: 2015-01-22 15:38:46
+  is_active: false
+  activation_token: MyString
+  uid: MyString
+  access_token: MyString
+  provider: MyString
+  oauth_token: MyString
+  oauth_expires_at: 2015-01-22 15:38:46
+  fb_image_url: MyString
+  display: false
+  position: 1
+  title: MyString
+  string: MyString
+  bio: MyText
+  phone: MyString
+  work_phone: MyString
+  home_phone: MyString
+  mobile_phone: MyString
+  fax: MyString
+  timezone: MyString
+  avatar_file_name: MyString
+  avatar_content_type: MyString
+  avatar_file_size: 1
+  avatar_updated_at: 2015-01-22 15:38:46
