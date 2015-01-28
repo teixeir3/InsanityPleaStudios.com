@@ -20,7 +20,7 @@ body { padding: 20px; }
 }
 
 main {
-  padding-top: 147px;
+  padding-top: 160px;
 }
 #site-slogan {
   font-size: 15px;
@@ -52,16 +52,16 @@ footer {
   margin-bottom: 0px;
 }
 
-.main-nav {
-  //top: -187px;
-  left: -95px;
-  position: relative;
-  transition:all 1s;
-  -moz-transition:all 1s ease-in;
-  -o-transition:all 1s ease-in;
-  -webkit-transition:all 1s ease-in;
-  transition:all 1s ease-in;
-}
+//.main-nav {
+//  //top: -187px;
+//  left: -95px;
+//  position: relative;
+//  transition:all 1s;
+//  -moz-transition:all 1s ease-in;
+//  -o-transition:all 1s ease-in;
+//  -webkit-transition:all 1s ease-in;
+//  transition:all 1s ease-in;
+//}
 
 // Small
 @media (max-width: 768px) {
@@ -80,6 +80,7 @@ footer {
   //  hidden when small
   .navbar-brand-big {
     top: -44px;
+    display: none;
     position: relative;
     transition:all 1s;
     -webkit-transition:all 1s;
