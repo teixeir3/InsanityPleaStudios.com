@@ -63,13 +63,55 @@ footer {
   transition:all 1s ease-in;
 }
 
-.navbar-brand {
-  top: -44px;
-  position: relative;
-  transition:all 1s;
-  -webkit-transition:all 1s;
-  -moz-transition:all 1s;
-  -o-transition:all 1s;
+// Small
+@media (max-width: 768px) {
+  
+  //  visible when small
+  .navbar-brand-small {
+    top: -44px;
+    position: relative;
+    transition:all 1s;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+//    display: hidden;
+  }
+  
+  //  hidden when small
+  .navbar-brand-big {
+    top: -44px;
+    position: relative;
+    transition:all 1s;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+//    display: hidden;
+  }
+}
+
+// big
+@media (min-width: 768px) {
+  
+  //  hidden when big
+  .navbar-brand-small {
+    top: -144px;
+    position: relative;
+    display: none;
+    transition:all 1s;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+  }
+  
+  //  visible when big
+  .navbar-brand-big {
+    top: -144px;
+    position: relative;
+    transition:all 1s;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+  }
 }
 
 .collapsed .navbar-brand{
@@ -86,6 +128,10 @@ footer {
 
 .container {
   overflow: hidden;
+}
+
+.collapsed .header-container {
+  height: 50px;
 }
 
 header {
@@ -116,10 +162,10 @@ body{
   top: -87px;
 }
 
-.collapsed .navbar-brand {
-  display: block;
-  -moz-transition:all 1s ease-in;
-  -o-transition:all 1s ease-in;
-  -webkit-transition:all 1s ease-in;
-  transition:all 1s ease-in;
-}
+//.collapsed .navbar-brand {
+//  display: block;
+//  -moz-transition:all 1s ease-in;
+//  -o-transition:all 1s ease-in;
+//  -webkit-transition:all 1s ease-in;
+//  transition:all 1s ease-in;
+//}
