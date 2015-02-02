@@ -13,8 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
-//= require_tree .
+
+//= require bootstrap
+
 
 
 var setFilepickerKey = function() {
@@ -100,7 +101,6 @@ var rowFadeout = function() {
   };
   
 var collapseCheck = function() {
-  console.log($(this).scrollTop());
   if ($(this).scrollTop() >= 53) {
       $('body').addClass('collapsed');
   } else {
