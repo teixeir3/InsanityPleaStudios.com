@@ -7,6 +7,15 @@ $navbarBackgroundHighlight: #888;
 $navbarText: #eee;
 $navbarLinkColor: #eee;
 
+$btn-primary-bg: #03a15a;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+//$btn-primary-bg: #03a15a;
+//.btn-primary {
+//  background-color: $btn-primary-bg;
+//}
 
 
 // TEST TEST TEST TEST TEST TEST TEST TEST TEST
