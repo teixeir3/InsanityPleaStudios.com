@@ -49,6 +49,7 @@ gem 'kaminari'
 gem 'pg_search'
 gem 'simple_form'
 gem "schema_to_scaffold"
+gem 'rename'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
