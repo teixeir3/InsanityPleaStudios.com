@@ -33,6 +33,12 @@ var fadeOutElement = function($el, delay) {
   }, delay);
 };
 
+var fadeInElement = function($el, delay) {
+  window.setTimeout(function() {
+    $el.fadeIn();
+  }, delay);
+};
+
 var clearElement = function($el){
   $el.html("");
 };
@@ -101,12 +107,81 @@ var rowFadeout = function() {
   };
   
 var collapseCheck = function() {
-  if ($(this).scrollTop() >= 53) {
-      $('body').addClass('collapsed');
+  scrollCheck(53);
+  
+  if (scrollCheck(53)) {
+    addClasses({'body': 'collapsed'});
   } else {
-      $('body').removeClass('collapsed');
+    removeClasses({'body': 'collapsed'});
   }
 };
+
+// var transformSidebarCheck = function() {
+//   // console.log("scroll-top: " + $(this).scrollTop());
+//   // console.log("header-height: " + $("header").height());
+//   // console.log("sidebar-height: " + $(".sidebar").height());
+//   // console.log("difference: " + ($(".sidebar").height() - $("header").height()));
+//   // console.log("\n")
+//
+//   if (checkSize()) {
+//     if (scrollCheck($("header").height())) {
+//       addClasses({".row": "sidebar-hidden"});
+//     } else {
+//      removeClasses({".row": "sidebar-hidden"});
+//     }
+//   }
+//
+// };
+
+var sidebarCheck = function() {
+  console.log(checkSize());
+  if (checkSize() && scrollCheck($(".sidebar").height() + $(".navbar-inverse").height())) {
+    $(".sidebar").fadeOut();
+    addClasses({".row": "main-content-full"});
+  } else if ($(".row").hasClass("main-content-full")) {
+    removeClasses({".row": "main-content-full"});
+    fadeInElement($(".sidebar"), 1000);
+  }
+ 
+};
+
+// var transformMainContentCheck = function() {
+//   if (scrollCheck(($("header").height()+2))) {
+//     addClasses({".row": "main-content-full"});
+//   } else {
+//    removeClasses({".row": "main-content-full"});
+//   }
+// };
+
+var addClasses = function(classHash) {
+  for (var key in classHash) {
+    $(key).addClass(classHash[key]);
+  }
+};
+
+var removeClasses = function(classHash) {
+  for (var key in classHash) {
+    $(key).removeClass(classHash[key]);
+  }
+};
+// toggleHash is a hash matching pattern [{ "elem": "addClassName"}, { "elem": "removeClassName"}]
+var scrollCheck = function(breakPoint) {
+
+  if ($(this).scrollTop() >= breakPoint) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+var checkSize = function() {
+    if ($(".sampleClass").css("float") == "none" ){
+      return true;
+    } else {
+      return false;
+    }
+};
+
 
 window.spinner = {
   on: function(){
@@ -185,6 +260,9 @@ $(document).on('page:change', function() {
   setFilepickerKey();
   window.spinner.off();
   $(window).scroll(collapseCheck);
+  $(window).scroll(sidebarCheck);
+  $(window).resize(sidebarCheck);
+
   
   fadeOutElement($('.errors'), 6000);
   fadeOutElement($('.notices'), 6000);
