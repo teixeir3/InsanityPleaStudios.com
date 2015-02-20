@@ -38,28 +38,12 @@
 
     
     <div class="row">
-      <div class="main-content col-md-9">
+      <div class="main-content col-md-8">
       	<%= yield %>
         <%= yield :js %>
       </div>
-      <div class="col-md-3 sidebar">
-           <h2>About Me</h2>
-           <p>
-             I am currently freelancing as a full stack web developer for hire.
-
-             I specialize in Ruby on Rails, JavaScript, Backbone.js, jQuery, SQL, HTML, and CSS. I  graduated in 2011 with a B.S. in Business Administration with specializations in marketing and a minor in psychology.
-
-             I have since co-founded a health IT consulting company where I was able to concurrently teach myself web development with the help of appacademy.io.
-
-             My GitHub: http://www.github.com/teixeir3
-             LinkedIn: http://www.linkedin.com/in/dougteixeira/en
-             https://www.tumblr.com/blog/teixeir3
-
-             Example websites: http://www.clark-travel.com
-             http://www.branchburgdoctors.com
-             
-             This portfolio is currently under construction
-           </p>
+      <div class="col-md-4 sidebar">
+        <%= render "layouts/about_me" %>
       </div>
       
     </div>

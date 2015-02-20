@@ -11,7 +11,7 @@ DougTeixeira::Application.routes.draw do
   end
   
   resources :pictures
-  
+  resources :contact_mes, only: [:new, :create]
   
   
   get 'session', to: redirect('/')

@@ -1,0 +1,39 @@
+<form action="<%= contact_mes_url %>" enctype="multipart/form-data" method="post">
+
+	<%= auth_token %>
+  
+	<h1>Contact Doug </h1>
+  
+	<div class="input">
+    <label for="name">First Name</label>
+		<input id="name" type="text" placeholder="First Name" name="contact_me[first_name]" value="">
+  </div> 
+  
+	<div class="input">
+    <label for="name">Last Name</label>
+		<input id="name" type="text" placeholder="Last Name" name="contact_me[last_name]" value="">
+  </div>
+  
+	<div class="input">
+    <label for="name">Title</label>
+		<input id="name" type="text" placeholder="Title" name="contact_me[first_name]" value="">
+  </div>
+    
+	<div class="input"><label for="phone">Phone Number</label>
+		<input id="phone" type="text" placeholder="Phone Number" name="contact_me[phone]" value="">
+  </div> 
+
+	<div class="input">
+    <label for="email">Email</label>
+		<input id="email" type="text" placeholder="Email" name="contact_me[email]" value="">
+  </div>
+    
+	<div class="input">
+    <label for="inquiry">Your Inquiry</label> 
+		<textarea id="inquiry" placeholder="Your Inquiry" name="contact_me[inquiry]" rows="10" cols="33"></textarea>
+  </div>
+    
+	<div class="submit long-submit">
+    <input class="btn btn-primary" type="submit" value="Send Message">
+  </div>
+</form>
