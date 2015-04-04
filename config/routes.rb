@@ -1,4 +1,6 @@
 DougTeixeira::Application.routes.draw do
+  resources :projects
+
   resources :users
 
   resource :session, only: [:create, :destroy, :new]
@@ -10,6 +12,7 @@ DougTeixeira::Application.routes.draw do
     resources :pictures
   end
   
+  
   resources :pictures
   resources :contact_mes, only: [:new, :create]
   
@@ -19,5 +22,5 @@ DougTeixeira::Application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
   
-  root to: "pages#home"
+  # root to: "pages#home"
 end

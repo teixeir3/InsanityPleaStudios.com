@@ -1,0 +1,42 @@
+# == Schema Information
+#
+# Table name: projects
+#
+#  id          :integer          not null, primary key
+#  title       :string(255)
+#  url         :string(255)
+#  description :text
+#  ord         :integer
+#  display     :boolean          default(TRUE), not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#  source_url  :string(255)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title,: MyString
+  url,: MyString
+  description: 
+  ord: 
+  'null': 
+  default: 
+  display: 
+  'null': MyString
+  false,: MyString
+  default: MyString
+  'true': MyString
+
+two:
+  title,: MyString
+  url,: MyString
+  description: 
+  ord: 
+  'null': 
+  default: 
+  display: 
+  'null': MyString
+  false,: MyString
+  default: MyString
+  'true': MyString

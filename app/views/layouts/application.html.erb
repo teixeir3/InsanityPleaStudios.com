@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DT's Weight Loss</title>
+  <title><%= yield :title %></title>
   <!--[if lt IE 9]>
      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
    <![endif]-->
@@ -33,7 +33,7 @@
   
 
   <!-- Begin standard content. *********************************************** -->
-  <main class="container">
+  <main class="container-fluid">
   
 
     
@@ -42,10 +42,6 @@
       	<%= yield %>
         <%= yield :js %>
       </div>
-      <div class="col-md-4 sidebar">
-        <%= render "layouts/about_me" %>
-      </div>
-      
     </div>
      
               

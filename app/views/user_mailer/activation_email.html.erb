@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Clark-Travel <%= @user.email %>, </h1>
+    <p>
+      You have successfully signed up to Clark-Travel!
+      Please activate your account by visiting this link:
+      <%= link_to("Activate", @url) %>
+    </p>
+
+    <p>
+      If you can't click the link, copy and paste this URL into your browser:
+      <br>
+      <%= @url %>
+    </p>
+
+    <p>
+      Thanks for joining and have a great day!
+    </p>
+  </body>
+</html>

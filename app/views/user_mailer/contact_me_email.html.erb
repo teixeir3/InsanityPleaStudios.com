@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    
+    <h1>Clark Travel Inquiry:</h1>
+
+    <h3>Hi <%= @user.first_name %>,</h3>
+    
+
+    <p>You have received an inquiry with the following details from <%= @params[:name] %> at www.clark-travel.com:</p>
+
+    <p>Message: <%= @params[:inquiry] %></p>
+    <p>Name: <%= @params[:name] %></p>
+    <p>Phone: <%= @params[:phone] %></p>
+    <p>Email: <%= @params[:email] %></p>
+    
+
+      <p>This is an automated message from www.clark-travel.com</p>
+      
+      <p>Thank you,<p>
+
+      <p>Clark Travel Agency, Inc.</p>
+      <p>(908) 595-0400</p>
+  </body>
+</html>

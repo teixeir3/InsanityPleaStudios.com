@@ -8,6 +8,8 @@ gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass'
+gem 'bootstrap-generators', '~> 3.3.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -33,7 +35,6 @@ gem 'high_voltage'
 # gem "less-rails"
 # gem 'twitter-bootstrap-rails'
 
-gem 'bootstrap-sass'
 
 gem 'paperclip', "~> 4.1"
 gem 'aws-sdk'

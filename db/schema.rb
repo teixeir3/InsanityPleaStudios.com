@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150108174118) do
+ActiveRecord::Schema.define(version: 20150404203202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,15 +19,30 @@ ActiveRecord::Schema.define(version: 20150108174118) do
   create_table "pictures", force: true do |t|
     t.string   "title"
     t.integer  "position"
-    t.boolean  "display",        default: true, null: false
+    t.boolean  "display",            default: true, null: false
     t.integer  "imageable_id"
     t.string   "imageable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "pictures", ["imageable_id", "imageable_type"], name: "index_pictures_on_imageable_id_and_imageable_type", using: :btree
   add_index "pictures", ["imageable_type"], name: "index_pictures_on_imageable_type", using: :btree
+
+  create_table "projects", force: true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.text     "description"
+    t.integer  "ord"
+    t.boolean  "display",     default: true, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "source_url"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                                                         null: false

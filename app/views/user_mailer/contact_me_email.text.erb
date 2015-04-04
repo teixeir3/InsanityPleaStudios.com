@@ -1,0 +1,15 @@
+Clark Travel Inquiry:
+
+Hi <%= @user.first_name %>,
+
+You have received an inquiry with the following details from <%= @params[:name] %> at www.clark-travel.com:
+
+Message: <%= @params[:inquiry] %>
+Name: <%= @params[:name] %>
+Phone: <%= @params[:phone] %>
+Email: <%= @params[:email] %>
+
+Thank you,
+
+Clark Travel Agency, Inc.
+(908) 595-0400
