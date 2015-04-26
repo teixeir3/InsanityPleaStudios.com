@@ -22,5 +22,5 @@ DougTeixeira::Application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
   
-  # root to: "pages#home"
+  root to: "projects#index"
 end

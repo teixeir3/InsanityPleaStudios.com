@@ -14,7 +14,7 @@
 #
 
 class Project < ActiveRecord::Base
-  
+  validates :title, :url, :description, presence: true
   
   belongs_to(
     :user,

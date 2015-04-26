@@ -1,35 +1,19 @@
-<h1>Listing projects</h1>
+<div class="row row-padding">
+  <div class="col-xs-12 welcome">
+    <%= render "pages/welcome" %>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title,</th>
-      <th>Url</th>
-      <th>Description</th>
-      <th>Ord</th>
-      <th>Display</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="row row-padding">
+  <div class="col-xs-12 about_me background-image">
+    <%= render "pages/about_me" %>
+  </div>
+</div>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.url %></td>
-        <td><%= project.description %></td>
-        <td><%= project.ord %></td>
-        <td><%= project.display %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row row-padding">
 
-<br>
+  <div class="col-xs-12 projects">
+    <%= render "index" %>
+  </div>
+</div>
 
-<%= link_to 'New Project', new_project_path %>

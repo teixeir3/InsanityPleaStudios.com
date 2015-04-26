@@ -134,7 +134,7 @@ var collapseCheck = function() {
 // };
 
 var sidebarCheck = function() {
-  console.log(checkSize());
+  // console.log(checkSize());
   if (checkSize() && scrollCheck($(".sidebar").height() + $(".navbar-inverse").height())) {
     $(".sidebar").fadeOut();
     addClasses({".row": "main-content-full"});
@@ -260,8 +260,8 @@ $(document).on('page:change', function() {
   setFilepickerKey();
   window.spinner.off();
   $(window).scroll(collapseCheck);
-  $(window).scroll(sidebarCheck);
-  $(window).resize(sidebarCheck);
+  // $(window).scroll(sidebarCheck);
+  // $(window).resize(sidebarCheck);
 
   
   fadeOutElement($('.errors'), 6000);

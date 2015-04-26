@@ -1,14 +1,21 @@
 <footer>
   <nav class="footer navbar navbar-inverse">
     <div id="footer-container" class="container">  
-      <div class="copyright left">
-      	<a href="http://www.AyosInformatics.com/"><img src="/assets/ayos_final_100x50_5.png" alt="Ayos Informatics"></a>
-        <small>© Ayos Informatics, LLC 2014</small>
+      
+      <div class="col-xs-12 text-center">
+        <%= render "pages/social_links", css_classes: "social-links" %>
       </div>
       
-      <%= render "layouts/social_links", css_classes: "right" %>
-  
-      <div class="right">
+      <div class="col-xs-12">
+        <div class="copyright text-center">
+        	<%= link_to "http://www.AyosInformatics.com/", class: "ayos-logo" do %>
+            <%= image_tag("ayos_final_300x200.gif", width: 150, height: 100) %>
+            <p><small>© Ayos Informatics, LLC 2014</small></p>
+          <% end %>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 text-center">
         <a class="address" href="<%= page_path("directions") %>">
         	<ul>
             <% 0.upto(ENV["ADRESS_LINE_COUNT"].to_i) do |i| %>
@@ -28,3 +35,4 @@
     </div>
   </nav>
 </footer>
+

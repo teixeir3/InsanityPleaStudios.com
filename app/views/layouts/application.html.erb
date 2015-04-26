@@ -9,6 +9,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= filepicker_js_include_tag %>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <meta class="sampleClass">
   <%= csrf_meta_tags %>
 </head>
@@ -25,8 +26,8 @@
   
   <!-- Begin Notification Area. *********************************************** -->
   
-    <%= render "layouts/messages", messages_arr: flash[:notices], class_name: "notices" if flash[:notices] %>
-    <%= render "layouts/messages", messages_arr: flash[:errors], class_name: "errors" if flash[:errors] %>
+    <%= render "layouts/messages", messages_arr: flash[:notice], class_name: "notice" if flash[:notice] %>
+    <%= render "layouts/messages", messages_arr: flash[:error], class_name: "danger" if flash[:error] %>
   
   <!-- End Notification Area. ************************************************* -->
   
@@ -38,7 +39,7 @@
 
     
     <div class="row">
-      <div class="main-content col-md-8">
+      <div class="main-content">
       	<%= yield %>
         <%= yield :js %>
       </div>

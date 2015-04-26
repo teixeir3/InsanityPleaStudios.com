@@ -28,11 +28,12 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
+        format.html { redirect_to @project, notice: ['Project was successfully created.'] }
         format.json { render action: 'show', status: :created, location: @project }
       else
+        flash.now[:error] = @project.errors.full_messages
         format.html { render action: 'new' }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
+        format.json { render json: flash.now[:error], status: :unprocessable_entity }
       end
     end
   end

@@ -2,12 +2,26 @@
 $iconSpritePath: image-path('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 
-$navbarBackground: #555;
-$navbarBackgroundHighlight: #888;
-$navbarText: #eee;
-$navbarLinkColor: #eee;
+//$navbarBackground:                            #555;
+//$navbarBackgroundHighlight:                   #888;
+//$navbarText:                                  #eee;
+//$navbarLinkColor:                             #eee;
 
-$btn-primary-bg: #03a15a;
+$btn-primary-bg:                              #03a15a;
+//$navbar-inverse-bg: #03a15a;
+$navbar-inverse-color:                        darken($btn-primary-bg, 10%);
+$navbar-inverse-link-color:                   $navbar-inverse-color;
+
+//$navbar-inverse-link-color:                 $navbar-inverse-color;
+//$navbar-inverse-link-hover-color:           $navbar-inverse-color;
+//$navbar-inverse-link-hover-bg:              $navbar-inverse-color;
+//$navbar-inverse-link-active-color:          $navbar-inverse-color;
+//$navbar-inverse-link-active-bg:             $navbar-inverse-color;
+//$navbar-inverse-link-disabled-color:        $navbar-inverse-color;
+//$navbar-inverse-link-disabled-bg:           $navbar-inverse-color;
+
+
+$font-size-base: 20px;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -55,9 +69,93 @@ $btn-primary-bg: #03a15a;
 //    top: 11px;
 //    left: -6px;
 //}
- 
+
+
+// Utility Classes
+
 .right { float: right;}
 
+
+.text-center {
+  text-align: center;
+}
+
+.img-center {
+  margin: auto;
+  display: block;
+}
+
+.background-image {
+//  background-size: cover;
+  background-attachment: fixed;
+}
+.about_me {
+  color: white;
+  background-image: url("dt_bg_1_580x656.png");
+  background-color: #29516D;
+//  color: $patient-portal-text-color;
+  //text-shadow:-1px 0 $text-shadow, 0 1px $text-shadow, 1px 0 $text-shadow, 0 -1px $text-shadow;
+}
+
+.projects {
+  
+}
+
+.welcome {
+  .alert {
+    margin-top: 60px;
+  }
+}
+
+.ayos-logo {
+  & > img:hover {
+    opacity: .7;
+  };
+}
+
+.social-links {
+  margin: auto;
+  width: 300px;
+  li {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    float: left;
+    a {
+      display: block;
+    }
+  }
+  
+  img:hover {
+    opacity: 0.8;
+  }
+}
+
+footer {
+  padding: 20px 0px;
+}
+
+#footer-container {
+  width: auto;
+}
+
+.row-padding { 
+  padding: 30px 30px 60px 30px;
+  min-height: 300px;
+}
+
+.list-group {
+  border: none;
+  box-shadow: none;
+}
+
+ul {
+  display: block;
+}
+.list-group-item {
+  background: inherit;
+  border: none;
+}
  
 .dropdown-submenu{position:relative;}
 .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
@@ -66,7 +164,7 @@ $btn-primary-bg: #03a15a;
 .dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
 .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
 
-.inverse-dropdown{
+.inverse-dropdown {
   background-color: #222;
   border-color: #080808;
   & > li > a {
@@ -74,9 +172,10 @@ $btn-primary-bg: #03a15a;
     &:hover{
       color: #fff;
       background-color: #000;
+      background-image: none;
     }
   }
-  &>.divider {
+  & > .divider {
     background-color: #000;
   }
 }
@@ -86,7 +185,7 @@ $btn-primary-bg: #03a15a;
  
  
 body {
-  padding: 180px 20px 20px 20px; 
+  padding-top: 180px;
   overflow-x: hidden;
   transition:all 1s;
   -webkit-transition:all 1s;
@@ -123,13 +222,6 @@ a { text-decoration: none; }
 
 ul, li { list-style-type: none; }
 
-footer {
-  padding: 20px 0px;
-}
-
-#footer-container {
-  width: auto;
-}
 
 #logo-nav {
   margin-bottom: 0px;
@@ -239,18 +331,18 @@ footer {
   }
   
   
-  .main-content-full .main-content {
-    width: 100%;
-  }
+  //.main-content-full .main-content {
+//    width: 100%;
+//  }
   
-  .main-content-full .sidebar {
-    display: none;
-
-    -moz-transition:all 1500ms ease-in;
-    -o-transition:all 1500ms ease-in;
-    -webkit-transition:all 1500ms ease-in;
-    transition:all 1500ms ease-in;
-  }
+  //.main-content-full .sidebar {
+//    display: none;
+//
+//    -moz-transition:all 1500ms ease-in;
+//    -o-transition:all 1500ms ease-in;
+//    -webkit-transition:all 1500ms ease-in;
+//    transition:all 1500ms ease-in;
+//  }
   
 }
 
