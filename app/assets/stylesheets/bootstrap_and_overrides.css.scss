@@ -216,8 +216,11 @@ figure {
 }
 .about_me {
   color: white;
-  background-image: url("dt_bg_1_580x656.png");
+  background-image: url("dt_bg_3_580x656.png");
   background-color: #29516D;
+  img {
+    width: 100%;
+  }
 //  color: $patient-portal-text-color;
   //text-shadow:-1px 0 $text-shadow, 0 1px $text-shadow, 1px 0 $text-shadow, 0 -1px $text-shadow;
 }
