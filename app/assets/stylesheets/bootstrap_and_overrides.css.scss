@@ -177,26 +177,31 @@ figure {
     left: 0;
     width: 100%;
     height: 100%;
+    padding: -2% 5%;
     background-color: #006437;
     text-align: center;
     backface-visibility: hidden;
     transform: rotateY(-180deg);
     transition: all 0.5s;
+    .project-description {
+      margin-top: 10%;
+    }
     h3 {
         margin-top: 10px;
         color: $brand-primary;
     }
-    img {
-        backface-visibility: hidden;
-        transition: all 0.5s;
-    }
+  }
+  img {
+      backface-visibility: hidden;
+      transition: all 0.5s;
+      width: 100%;
   }
 }
 .no-touch .projects figure:hover img,
 .projects figure:hover img {
     transform: rotateY(180deg);
-    backface-visibility: hidden;
-    transition: all 0.5s;
+   // backface-visibility: hidden;
+//    transition: all 0.5s;
 }
 .no-touch .projects figure:hover figcaption,
 .projects figure:hover figcaption {

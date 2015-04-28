@@ -30,21 +30,21 @@
             <%= image_tag("portfolio_logo_small_60x48.png", alt: "DougTeixeira.com Logo") %>
           <% end %>
           <li>
-            <%= link_to "Home", root_path(anchor: "welcome") %>
+            <%= link_to "Home", root_path(anchor: "welcome"), class: "anchored", data: {anchor: "#welcome"}%>
           </li>
         </ul>
         
         <ul class="nav navbar-nav nav-pills navbar-right">
          <li class="active">
-           <%= link_to root_path(anchor: "about") do %>
+           <%= link_to root_path(anchor: "about"), class: "anchored", data: {anchor: "#about"} do %>
             About <span class="sr-only">(current)</span>
            <% end %>
          </li>
           <li>
-            <%= link_to "Projects", root_path(anchor: "projects") %>
+            <%= link_to "Projects", root_path(anchor: "projects"), class: "anchored", data: {anchor: "#projects"} %>
           </li>
          <li>
-           <%= link_to "Contact", root_path(anchor: "contact") %>
+           <%= link_to "Contact", root_path(anchor: "contact"), class: "anchored", data: {anchor: "#contact"} %>
          </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>

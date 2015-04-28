@@ -12,17 +12,24 @@
         <div class="col-xs-12 col-sm-6 col-md-4">
           <li class="list-item-group project">
             <figure class="hover">
-              <%= image_tag("linkedin-icon.png", alt: project.title) %>
+              <% @picture_url = "PreventIT_login.png" if project.title == "BranchburgDoctors.com" %>
+              <% @picture_url = "branchburgdoctors_services.png" if project.title == "PreventIT Health" %>
+              <% @picture_url = "clark-travel_home.png" if project.title == "Clark-Travel.com" %>
+              
+              <%= image_tag(@picture_url, alt: project.title) %>
               <figcaption>
                 <h3>
-                  <%= link_to project.url, project.title, target: "_blank" %> 
-                  <small class="project-links">
-                    ( <%= link_to "Live", project.url %> | <%= link_to "Source", project.source_url %> )
-                  </small>
+                  <%= link_to project.title, project.url, target: "_blank" %> 
                 </h3>
-                    <span class="project-description"><%= project.description %></span>
-                    <a href="#" class="close-caption hidden">x</a>
-                </figcaption>
+                
+                <span class="project-links">
+                  ( <%= link_to "Live", project.url %> | <%= link_to "Source", project.source_url %> )
+                </span>
+                
+                <span class="project-description"><%= project.description %></span>
+                
+                <a href="#" class="close-caption hidden">x</a>
+              </figcaption>
             </figure>
           </li>
         </div>

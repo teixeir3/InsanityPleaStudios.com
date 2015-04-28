@@ -274,12 +274,13 @@ $(document).on('page:change', function() {
   });
   
   $('.anchored').on("click", function(event) {
-   if ($(event.target).data("anchored") === true) {
-     event.preventDefault(); 
-   }
+   // if ($(event.target).data("anchored") === true) {
+    event.preventDefault(); 
+   
      
    // console.log();
-   $($(event.target).data("anchor")).animatescroll({padding:71});  
+    $($(event.target).data("anchor")).animatescroll({});
+    // $($(event.target).data("anchor")).animatescroll({padding:71});
   });
   
   
