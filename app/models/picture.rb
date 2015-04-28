@@ -23,6 +23,7 @@ class Picture < ActiveRecord::Base
                      :styles => { :small => "300x180", :medium => "700x332>", :large => "748x348", :thumb => "100x100>" },
                      :default_url => ":style/promotion_missing.png",
                      :bucket => ENV["AWS_BUCKET"]
-   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
+                      
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 end
 

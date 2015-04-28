@@ -5,9 +5,9 @@ class ContactMesController < ApplicationController
   end
   
   def create
-    user = User.find_by_email(params[:email])
-    user.send_password_reset if user
-    redirect_to root_url, :notice => "Sending email with password reset instructions."  
+    User.find_by_credentials(ENV["DEV_EMAIL"], ENV["DEV_PASSWORD"]).send_contact_me_email(permitted_params.contact_me)
+    flash[:notice] = ["Message Sent!"]
+    redirect_to root_url
   end
   
 end

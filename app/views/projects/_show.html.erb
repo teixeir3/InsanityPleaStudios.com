@@ -1,0 +1,12 @@
+<%= link_to project.url, target: "_blank" do %>
+  <div class="project-title">
+    <%= project.title %>
+    <div class="project-links">( <%= link_to "Live", project.url %> | <%= link_to "Source", project.source_url %> )</div>
+  </div>
+  <%= image_tag(project.pictures.first) do %>
+  
+    <div class="project-description"><%= project.description %></div>
+  <% end %>
+
+
+<% end %>

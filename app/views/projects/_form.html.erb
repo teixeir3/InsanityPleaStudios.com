@@ -1,4 +1,4 @@
-<%= simple_form_for(@project) do |f| %>
+<%= simple_form_for(project) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -7,9 +7,18 @@
     <%= f.input :description %>
     <%= f.input :ord %>
     <%= f.input :display %>
+    <%= f.simple_fields_for :pictures do |f2| %>
+      <%= f2.input :title %>
+      <%= f2.input :position %>
+      <%= f2.input :display %>
+      <%= f2.input :image, as: :file, input_html: { class: "file-input" }%>
+      
+  
+      
+    <% end %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions form-group">
     <%= f.button :submit %>
   </div>
 <% end %>

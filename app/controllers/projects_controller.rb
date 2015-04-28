@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :require_signed_in!, only: [:new, :edit, :create, :destroy]
 
   # GET /projects
   # GET /projects.json
@@ -15,6 +16,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    @picture = @project.pictures.build
   end
 
   # GET /projects/1/edit

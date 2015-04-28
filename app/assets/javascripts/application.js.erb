@@ -15,7 +15,8 @@
 //= require turbolinks
 
 //= require bootstrap
-
+//= require animate-scroll
+//= require fileinput
 
 
 var setFilepickerKey = function() {
@@ -266,6 +267,20 @@ $(document).on('page:change', function() {
   
   fadeOutElement($('.errors'), 6000);
   fadeOutElement($('.notices'), 6000);
+  
+  $(".file-input").fileinput({
+    removeClass: "btn btn-danger",
+    uploadClass: "btn btn-success"
+  });
+  
+  $('.anchored').on("click", function(event) {
+   if ($(event.target).data("anchored") === true) {
+     event.preventDefault(); 
+   }
+     
+   // console.log();
+   $($(event.target).data("anchor")).animatescroll({padding:71});  
+  });
   
   
   $('.deletable').bind('ajax:success', rowFadeout);

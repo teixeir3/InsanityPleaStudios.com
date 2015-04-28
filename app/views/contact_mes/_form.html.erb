@@ -1,0 +1,30 @@
+  <div class="form">
+  <form action="<%= contact_mes_url %>" enctype="multipart/form-data" method="post">
+
+  	<%= auth_token %>
+  
+  	<div class="form-group">
+      <label for="name">Name</label>
+  		<input class="form-control" id="name" type="text" placeholder="Name" name="contact_me[name]" value="">
+    </div>
+    
+  	<div class="form-group">
+      <label for="phone">Phone Number</label>
+  		<input class="form-control" id="phone" type="text" placeholder="Phone Number" name="contact_me[phone]" value="">
+    </div> 
+
+  	<div class="form-group">
+      <label for="email">Email</label>
+  		<input class="form-control" id="email" type="text" placeholder="Email" name="contact_me[email]" value="">
+    </div>
+    
+  	<div class="form-group">
+      <label for="inquiry">Your Inquiry</label> 
+  		<textarea class="form-control" id="inquiry" placeholder="Your Inquiry" name="contact_me[inquiry]" rows="10" cols="33"></textarea>
+    </div>
+    
+  	<div class="form-group">
+      <input class="btn btn-lg btn-primary" type="submit" value="Send Message">
+    </div>
+  </form>
+</di>
