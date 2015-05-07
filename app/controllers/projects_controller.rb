@@ -26,12 +26,14 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
-
+    @project = Project.new(permitted_params.project)
+    @project.pictures.build(permitted_params.project[:pictures_attributes])
+    
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: ['Project was successfully created.'] }
         format.json { render action: 'show', status: :created, location: @project }
+        fail
       else
         flash.now[:error] = @project.errors.full_messages
         format.html { render action: 'new' }
@@ -45,11 +47,11 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
+        format.html { redirect_to @project, notice: ['Project was successfully updated.'] }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
+        format.json { render json: @project.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end
@@ -59,7 +61,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url }
+      format.html { redirect_to projects_url, notice: ["Project: #{@project.title} Deleted."] }
       format.json { head :no_content }
     end
   end
@@ -68,6 +70,8 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+      @pictures = @project.pictures
+      @picture = @project.pictures.build
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

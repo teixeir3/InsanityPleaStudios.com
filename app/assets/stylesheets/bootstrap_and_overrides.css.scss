@@ -123,7 +123,7 @@ ul {
 }
 
 // Figures
-figure {
+figure.figure {
   margin: 0;
   position: relative;
 
@@ -518,8 +518,17 @@ ul, li { list-style-type: none; }
   .navbar-brand-big {
     top: 0px;
   }
+  #logo-nav {
+    background: $brand-primary;
+    border: none;
+    opacity: .9;
+    transition:all 1s;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+  }
   #site-slogan {
-    color: $brand-primary;
+//    color: $brand-primary;
     top: 16px;
 
   }

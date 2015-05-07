@@ -25,4 +25,5 @@ class Project < ActiveRecord::Base
   )
   
   include Imageable
+  accepts_nested_attributes_for :pictures
 end

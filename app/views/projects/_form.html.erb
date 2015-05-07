@@ -8,6 +8,7 @@
     <%= f.input :description %>
     <%= f.input :ord %>
     <%= f.input :display %>
+    <%= f.association :pictures %>
     <%= f.simple_fields_for :pictures do |f2| %>
       <%= f2.input :title %>
       <%= f2.input :position %>

@@ -1,6 +1,9 @@
-<h1>Editing project</h1>
+<div class="col-xs-6 col-xs-offset-3 row-padding">
+  <div class="page-header text-center">
+    <h1>Editing Project: <small><%= @project.title %></small></h1>
+  </div>
+  
+  <%= render 'form', project: @project, picture: @picture %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+  <%= link_to 'Back', projects_path %>
+</div>
