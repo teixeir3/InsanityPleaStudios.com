@@ -18,6 +18,15 @@ module DougTeixeira
     
     config.filepicker_rails.api_key = ENV['FILEPICKER_KEY']
     config.filepicker_rails.secret_key = ENV["FILEPICKER_SECRET_KEY"]
+    config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+        :bucket => ENV['AWS_BUCKET'],
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+        :s3_host_name => ENV['S3_HOST_NAME']
+      }
+    }
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
