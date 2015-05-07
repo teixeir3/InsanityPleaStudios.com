@@ -13,3 +13,12 @@ test:
   host: localhost
   username: Doug
   password: ENV['DEV_PASSWORD']
+  
+production:
+  adapter: postgresql
+  database: weight_loss_production
+  host: localhost
+  username: Doug
+  password: ENV['DEV_PASSWORD']
+  pool: 5
+  timeout: 5000
