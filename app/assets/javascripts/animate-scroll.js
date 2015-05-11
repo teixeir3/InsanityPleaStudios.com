@@ -147,6 +147,7 @@
                 
         if(opts.element == "html,body") {
             // Get the distance of particular id or class from top
+            console.log(this);
             var offset = this.offset().top;
         
             // Scroll the page to the desired position

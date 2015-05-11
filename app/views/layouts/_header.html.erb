@@ -2,9 +2,10 @@
   <nav id="logo-nav" class="logo navbar navbar-default">
     <div class="container">
       <figure id="logo" class="logo">
-        <a href="<%= root_url %>">
+        <span class="anchor" id="home"></span>
+        <%= link_to root_path(anchor: "home"), class: "anchored", data: {anchor: "#home"} do %>
           <img class="site-logo" src="<%= image_url("douglas_teixeira_logo_298x59.png") %>" alt="Weight Tracker">
-        </a>
+        <% end %>
         <figcaption id="site-slogan">You should <strong>hire me</strong>.</figcaption>
       </figure>
     </div>

@@ -13,6 +13,8 @@
   <%= favicon_link_tag 'favicon/favicon.ico' %>
   <meta class="sampleClass">
   <%= csrf_meta_tags %>
+  
+  <%= yield :head %>
 </head>
 <body>
   <!-- Begin modal content. ********************************************************* -->

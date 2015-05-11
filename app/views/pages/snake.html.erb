@@ -1,0 +1,28 @@
+<div class="col-xs-12">
+  <div class="page-header text-center">
+    <h1>Snake: <small>(wasd keys for controls)</small></h1>
+  </div>
+  <ul class="grid group">
+   
+  </ul>
+</div>
+
+
+
+
+<%= javascript_include_tag "snake_ui" %>
+
+<script type="application/javascript">
+  $(function() {
+
+   for(var y = 0; y < 9; y++) {
+     for(var x = 0; x < 9; x++) {
+       $(".grid").append("\<li data-id=\"[" + y + ", " + x + "]\">\<\/li>");
+     }
+   }
+
+   var view = new SnakeUI.View($('.grid'));
+   view.start();
+});
+
+</script>

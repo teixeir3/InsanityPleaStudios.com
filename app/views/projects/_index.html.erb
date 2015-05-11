@@ -12,10 +12,15 @@
         <div class="col-xs-12 col-sm-6 col-md-4">
           <li class="list-item-group project">
             <figure class="figure">
-              <% @picture_url = "PreventIT_login.png" if project.title == "BranchburgDoctors.com" %>
-              <% @picture_url = "branchburgdoctors_services.png" if project.title == "PreventIT Health" %>
-              <% @picture_url = "clark-travel_home.png" if project.title == "Clark-Travel.com" %>
-              
+              <% case project.title %>
+                <% when "BranchburgDoctors.com"%>
+                  <%  @picture_url = "branchburgdoctors_services.png" %>
+                <% when "PreventIT Health"%>
+                  <% @picture_url = "PreventIT_login.png" %>
+                <% when "Clark-Travel.com"%>
+                  <% @picture_url = "clark-travel_home.png" %> 
+              <% end %>
+    
               <%= image_tag(@picture_url, alt: project.title) %>
               <figcaption>
                 <h3>

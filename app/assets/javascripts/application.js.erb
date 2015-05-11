@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-
+//= require underscore
 //= require bootstrap
 //= require animate-scroll
 //= require fileinput
@@ -253,7 +253,7 @@ $(document).on("ajax:complete", function(event){
 });
 
 $(document).on('page:fetch', function() {
-  spinOn();
+  window.spinner.on();
 });
 
 // Bind event listeners for TurboLinks
@@ -275,12 +275,14 @@ $(document).on('page:change', function() {
   
   $('.anchored').on("click", function(event) {
    // if ($(event.target).data("anchored") === true) {
-    console.log($(event.target).data("anchored"));
+    // console.log($(event.target).data("anchored"));
+    var $el = $(event.target).data("anchor");
+    console.log($el);
     event.preventDefault(); 
    
      
    // console.log();
-    $($(event.target).data("anchor")).animatescroll({});
+    $($el).animatescroll({});
     // $($(event.target).data("anchor")).animatescroll({padding:71});
   });
   
