@@ -108,6 +108,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (4.7.5)
@@ -232,6 +234,7 @@ DEPENDENCIES
   kaminari
   koala
   letter_opener
+  meta-tags
   newrelic_rpm
   omniauth-facebook
   owlcarousel-rails

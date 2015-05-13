@@ -52,6 +52,7 @@ gem 'pg_search'
 gem 'simple_form'
 gem "schema_to_scaffold"
 gem 'rename'
+gem 'meta-tags'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
