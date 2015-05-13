@@ -16,15 +16,19 @@
 
     switch(event.keyCode) {
       case 37:
+        event.preventDefault();
         this.board.snake.turn('W');
         break;
       case 38:
+        event.preventDefault();
         this.board.snake.turn('N');
         break;
       case 39:
+        event.preventDefault();
         this.board.snake.turn('E');
         break;
       case 40:
+        event.preventDefault();
         this.board.snake.turn('S');
         break;
       // default:
