@@ -15,12 +15,12 @@
               <% case project.title %>
                 <% when "BranchburgDoctors.com"%>
                   <%  @picture_url = "branchburgdoctors_services.png" %>
-                <% when "PreventIT Health"%>
+                <% when "Prevent IT Health"%>
                   <% @picture_url = "PreventIT_login.png" %>
                 <% when "Clark-Travel.com"%>
                   <% @picture_url = "clark-travel_home.png" %> 
               <% end %>
-    
+              <% #image_tag(project.pictures.first.image, alt: project.title) %>
               <%= image_tag(@picture_url, alt: project.title) %>
               <figcaption>
                 <h3>
