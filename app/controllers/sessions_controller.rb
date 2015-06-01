@@ -26,8 +26,7 @@ class SessionsController < ApplicationController
       sign_in(@user)
       flash[:notice] = ["Welcome #{@user.name}"]
 
-      session[:return_url] = request.referrer unless session[:return_url]
-      redirect_to root_url
+      redirect_to (session[:return_url].nil?) ? :root : session[:return_url]
     else
       flash.now[:error] = ["Incorrect credentials"]
       render :new
