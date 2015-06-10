@@ -173,7 +173,9 @@ figure.figure {
   }
 
 }
-
+.new-link-full {
+  margin: -180px 0px;
+}
 .projects {
   .new-project {
     color: $brand-primary;
@@ -579,4 +581,48 @@ header {
   -webkit-transition:all 1s;
   -moz-transition:all 1s;
   -o-transition:all 1s;
+}
+
+// ####################### Snake Game ############################
+
+
+.grid {
+  margin: 30px auto;
+  width: 460px;
+  border: 5px solid black;
+  padding-left: 0;
+}
+
+.grid > li {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  background: $navbar-inverse-bg;
+  cursor: pointer;
+}
+
+.grid > .snake {
+  background: $brand-primary;
+  &:before {
+//    content: "\f192";
+  }
+}
+
+.grid > .apple {
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  line-height: 44px;
+  &:before {
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; 
+    content: "\f179";
+    font-family:'FontAwesome';
+    src:url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+    src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  }
 }

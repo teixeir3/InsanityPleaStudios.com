@@ -6,7 +6,7 @@
   var Snake = SnakeGame.Snake = function() {
     this.dir = "N";
     this.segments = [new Coord(6,6), new Coord(6,7)];
-    // TODO: Check this works
+
 
   };
 
@@ -82,7 +82,6 @@
 
 
     var filledGrid = this.populate(emptyGrid);
-//    console.log(filledGrid);
     return filledGrid;
 
   };
