@@ -7,7 +7,7 @@
 
 <div class="col-xs-12">
   <div>
-    <ul class="list-group">
+    <ul class="list-group projects">
       <% @projects.each do |project| %>
         <div class="col-xs-12 col-sm-6">
           <li class="list-item-group project">
@@ -37,48 +37,53 @@
           </li>
         </div>
       <% end %>
-     
+
+        <div class="col-xs-12 col-sm-<%= (@projects.length % 2 == 0) ? 12 : 6 %>">
+         <li class="list-item-group project">
+           <figure class="figure">
+           	<%= link_to new_project_path, class: "new-project" do %>
+               <i class="fa fa-4x fa-plus-circle"></i>
+            <% end %>
+           </figure>
+         </li>
+        <div>
     </ul>
   </div>
 </div>
 
-<div class="col-xs-12 row-padding">
-  <% if current_user_is_admin? %>
-    <div class="col-xs-12">
-      <table>
-        <thead>
-          <tr>
-            <th>Title,</th>
-            <th>Url</th>
-            <th>Description</th>
-            <th>Ord</th>
-            <th>Display</th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @projects.each do |project| %>
+<% if current_user_is_admin? %>
+  <div class="col-xs-12 row-padding">
+      <div class="col-xs-12">
+        <table>
+          <thead>
             <tr>
-              <td><%= project.title %></td>
-              <td><%= project.url %></td>
-              <td><%= project.description %></td>
-              <td><%= project.ord %></td>
-              <td><%= project.display %></td>
-              <td><%= link_to 'Show', project %></td>
-              <td><%= link_to 'Edit', edit_project_path(project) %></td>
-              <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <th>Title,</th>
+              <th>Url</th>
+              <th>Description</th>
+              <th>Ord</th>
+              <th>Display</th>
+              <th></th>
+              <th></th>
+              <th></th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
+          </thead>
 
-      
-
+          <tbody>
+            <% @projects.each do |project| %>
+              <tr>
+                <td><%= project.title %></td>
+                <td><%= project.url %></td>
+                <td><%= project.description %></td>
+                <td><%= project.ord %></td>
+                <td><%= project.display %></td>
+                <td><%= link_to 'Show', project %></td>
+                <td><%= link_to 'Edit', edit_project_path(project) %></td>
+                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       <p><%= link_to 'New Project', new_project_path if current_user_is_admin? %></p>
-      
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>

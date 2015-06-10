@@ -103,7 +103,6 @@ var ensureUnique = function(description) {
 };
 
 var rowFadeout = function() {
-    console.log("in rowFadeout Method!");
     $(this).closest('tr').fadeOut();
   };
   
@@ -117,25 +116,7 @@ var collapseCheck = function() {
   }
 };
 
-// var transformSidebarCheck = function() {
-//   // console.log("scroll-top: " + $(this).scrollTop());
-//   // console.log("header-height: " + $("header").height());
-//   // console.log("sidebar-height: " + $(".sidebar").height());
-//   // console.log("difference: " + ($(".sidebar").height() - $("header").height()));
-//   // console.log("\n")
-//
-//   if (checkSize()) {
-//     if (scrollCheck($("header").height())) {
-//       addClasses({".row": "sidebar-hidden"});
-//     } else {
-//      removeClasses({".row": "sidebar-hidden"});
-//     }
-//   }
-//
-// };
-
 var sidebarCheck = function() {
-  // console.log(checkSize());
   if (checkSize() && scrollCheck($(".sidebar").height() + $(".navbar-inverse").height())) {
     $(".sidebar").fadeOut();
     addClasses({".row": "main-content-full"});
@@ -274,16 +255,18 @@ $(document).on('page:change', function() {
   });
   
   $('.anchored').on("click", function(event) {
-   // if ($(event.target).data("anchored") === true) {
-    // console.log($(event.target).data("anchored"));
-    var $el = $(event.target).data("anchor");
-    console.log($el);
-    event.preventDefault(); 
+
+
+    var $el = $($(event.target).data("anchor"));
+
+   
    
      
-   // console.log();
-    $($el).animatescroll({});
-    // $($(event.target).data("anchor")).animatescroll({padding:71});
+    if ($el.length > 0) {
+      event.preventDefault(); 
+      $el.animatescroll({});
+    }
+
   });
   
   

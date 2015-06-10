@@ -33,7 +33,6 @@ class ProjectsController < ApplicationController
       if @project.save
         format.html { redirect_to @project, notice: ['Project was successfully created.'] }
         format.json { render action: 'show', status: :created, location: @project }
-        fail
       else
         flash.now[:error] = @project.errors.full_messages
         format.html { render action: 'new' }
