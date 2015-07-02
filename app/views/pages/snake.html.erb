@@ -15,13 +15,7 @@
 <script type="application/javascript">
   $(function() {
 
-   for(var y = 0; y < 9; y++) {
-     for(var x = 0; x < 9; x++) {
-       $(".grid").append("\<li data-id=\"[" + y + ", " + x + "]\">\<\/li>");
-     }
-   }
-
-   var view = new SnakeUI.View($('.grid'));
+   var view = new SnakeUI.View($('.grid'), 20, 20);
    view.start();
 });
 

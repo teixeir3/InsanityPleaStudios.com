@@ -3,14 +3,14 @@
 (function() {
   var UI = window.SnakeUI = (window.SnakeUI || {});
 
-  var View = UI.View = function(htmlEl) {
-    this.$el = htmlEl; //does this in a $()?
-
-
-
-
+  var View = UI.View = function(htmlEl, max_x, max_y) {
+    this.$el = htmlEl;
+    this.length = max_x;
+    this.width = max_y;
   };
 
+  
+  
   var handleKeyEvent = function(event) {
 
 
@@ -34,13 +34,21 @@
       // default:
       //   alert("WTF");
     }
-  }
+  };
+  
+  View.prototype.buildGrid = function() {
+    for(var y = 0; y < this.width; y++) {
+      for(var x = 0; x < this.length; x++) {
+       this.$el.append("\<li data-id=\"[" + y + ", " + x + "]\">\<\/li>");
+      }
+    }
+  };
 
   View.prototype.cleanUpSnake = function() {
     var removeCoord = _.last(this.board.snake.segments);
     var x = removeCoord.x;
     var y = removeCoord.y;
-    return [removeCoord, (y*9) + x + 1];
+    return [removeCoord, (y * this.width) + x + 1];
 
   };
 
@@ -51,9 +59,9 @@
     this.board.snake.segments.forEach(function(segment) {
       var x = segment.x;
       var y = segment.y;
-      var index = (y*9) + x + 1;
+      var index = (y * that.width) + x + 1;
       that.$el.find('li:nth-child(' + index + ')').addClass('snake');
-      console.log(that.board.snake.segments);
+      // console.log(that.board.snake.segments);
     });
 
 
@@ -61,7 +69,7 @@
       var x = apple.x;
       var y = apple.y;
 
-      var index = (y*9) + x + 1;
+      var index = (y * that.width) + x + 1;
       that.$el.find('li:nth-child(' + index + ')').addClass('apple');
 
     });
@@ -93,8 +101,8 @@
     var that = this;
     var shouldRemoveIndex = true;
     this.board.apples.forEach(function(apple) {
-      if (lookForApple.x == apple.x && lookForApple.y == apple.y) {
-        var index = (apple.y*9) + apple.x + 1;
+      if (lookForApple.equals(apple)) {
+        var index = (apple.y * that.width) + apple.x + 1;
         that.$el.find('li:nth-child(' + index + ')').removeClass('apple');
         that.board.apples.splice(that.board.apples.indexOf(apple), 1);
         that.board.growMySnake(removeCoord);
@@ -115,6 +123,8 @@
 
 
   View.prototype.start = function() {
+    this.buildGrid();
+    
     this.board = new window.SnakeGame.Board();
 
     var that = this;
@@ -128,7 +138,7 @@
     //interval with #step.
     this.timerId = setInterval(function() {
       that.step();
-    },500);
+    },150);
 
 
   };

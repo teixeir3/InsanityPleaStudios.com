@@ -588,22 +588,25 @@ header {
 
 .grid {
   margin: 30px auto;
-  width: 460px;
-  border: 5px solid black;
+  width: 402px;
+  border: 1px solid black;
   padding-left: 0;
 }
 
 .grid > li {
   float: left;
-  width: 50px;
-  height: 50px;
-  border: 5px solid black;
-  background: $navbar-inverse-bg;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  background: lighten($navbar-inverse-bg, 10%);
   cursor: pointer;
 }
 
 .grid > .snake {
+  z-index: 999;
   background: $brand-primary;
+  color: $brand-primary !important;
+  text-shadow: none;
   &:before {
 //    content: "\f192";
   }
@@ -611,9 +614,9 @@ header {
 
 .grid > .apple {
   color: red;
-  font-size: 40px;
+  font-size: 18px;
   text-align: center;
-  line-height: 44px;
+  line-height: 22px;
   &:before {
     text-shadow:
         -1px -1px 0 #000,

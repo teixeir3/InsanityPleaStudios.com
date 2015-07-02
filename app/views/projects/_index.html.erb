@@ -38,6 +38,7 @@
         </div>
       <% end %>
 
+      <% if current_user_is_admin? %>
         <div class="col-xs-12 col-sm-<%= (@projects.length % 2 == 0) ? "12 new-link-full" : 6 %>">
          <li class="list-item-group project">
            <figure class="figure">
@@ -47,6 +48,7 @@
            </figure>
          </li>
         <div>
+      <% end %>
     </ul>
   </div>
 </div>

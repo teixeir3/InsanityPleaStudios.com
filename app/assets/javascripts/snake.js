@@ -4,7 +4,7 @@
   var SnakeGame = window.SnakeGame = (window.SnakeGame || {});
 
   var Snake = SnakeGame.Snake = function() {
-    this.dir = "N";
+    this.dir = "E";
     this.segments = [new Coord(6,6), new Coord(6,7)];
 
 
@@ -29,6 +29,10 @@
 
   Snake.prototype.containsSegment = function(pos) {
     // returns true if a segment occupies a pos
+    this.segments.forEach(function(segment) {
+      console.log(pos);
+      console.log(segment);
+    });
   };
 
   Snake.prototype.turn = function(newDir) {
@@ -48,28 +52,36 @@
     var newCoord = new Coord(this.x + delta[0], this.y + delta[1]);
     return newCoord;
 
-  }
+  };
+  
+  Coord.prototype.equals = function(coord) {
+    if (this.x == coord.x && this.y == coord.y) {
+      return true;
+    }
+    
+    return false;
+  };
+  
+  // Coord.prototype.valid = function() {
+  //
+  // }
 
   Snake.DIRS = ["N", "E", "S", "W"];
 
   var Board = SnakeGame.Board = function() {
     this.snake = new Snake();
-    this.apples = [new Coord(3,3)]; //TODO
+    this.apples = [new Coord(3,3)]; //TODO make more apples spawn
   };
 
-  Board.DIM_X = 9;
-  Board.DIM_Y = 9;
+  Board.DIM_X = 20;
+  Board.DIM_Y = 20;
 
   Board.prototype.growMySnake = function(newCoord) {
 
     this.snake.segments.push(newCoord);
 
-//    if this.apples
-
 
   }
-
-  //this.board.growMySnake();
 
   Board.prototype.render = function() {
 
@@ -85,6 +97,14 @@
     return filledGrid;
 
   };
+  
+  Board.prototype.validCoord = function(coord) {
+    if (coord.x < 0 || coord.x > this.DIM_X || coord.y < 0 || coord.y > DIM_Y) {
+      return false;
+    } 
+    
+    return true;
+  }
 
   Board.prototype.populate = function(grid) {
 
