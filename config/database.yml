@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: weight_loss_dev
+  database: insanity_plea_studios_dev
   host: localhost
   username: Doug
   password: ENV['DEV_PASSWORD']
@@ -9,14 +9,14 @@ development:
 
 test:
   adapter: postgresql
-  database: weight_loss_test
+  database: insanity_plea_studios_test
   host: localhost
   username: Doug
   password: ENV['DEV_PASSWORD']
   
 production:
   adapter: postgresql
-  database: weight_loss_production
+  database: insanity_plea_studios_production
   host: localhost
   username: Doug
   password: ENV['DEV_PASSWORD']
