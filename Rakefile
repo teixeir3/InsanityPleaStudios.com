@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DougTeixeira::Application.load_tasks
+InsanityPleaStudios::Application.load_tasks

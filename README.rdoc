@@ -1,7 +1,7 @@
-# DougTeixeira.com
+# InsanityPleaStudios.com
 
 My portfolio - :)
-[Live]:http://www.DougTeixeira.com
+[Live]:http://www.InsanityPleaStudios.com
 
 
 ## TODO
