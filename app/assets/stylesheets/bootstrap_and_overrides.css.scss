@@ -7,9 +7,10 @@ $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 //$navbarText:                                  #eee;
 //$navbarLinkColor:                             #eee;
 
-$brand-primary:                               #03a159;
+$brand-primary:                               #A32931;
 $link-color:                                  darken($brand-primary, 10%);
-$list-group-link-color:                       $link-color;
+$list-group-link-color:                       darken($brand-primary, 10%);
+//$list-group-link-color:                       $link-color;
 //$btn-primary-bg:                              #03a159;
 $navbar-inverse-bg:                           rgba(34, 34, 34, 1);
 $navbar-inverse-bg-transparent:               rgba(34, 34, 34, 0.9);
@@ -101,7 +102,7 @@ $font-size-base: 20px;
 .row-padding { 
   padding-top: 30px;
   padding-bottom: 60px;
-  min-height: 350px;
+//  min-height: 350px;
 }
 
 
@@ -246,9 +247,9 @@ figure.figure {
 }
 
 .contact {
-  color: white;
-  background-image: url("dt_bg_2_580x656.png");
-  background-color: #AA5839;
+//  color: white;
+//  background-image: url("dt_bg_2_580x656.png");
+//  background-color: #AA5839;
   .list-group-link {
     padding: 0;
   }
@@ -258,10 +259,18 @@ figure.figure {
       height: 100%;
       width: 100%;
       display: block;
-      color: white;
+      color: $link-color;
+      transition:all 1s;
+      -webkit-transition:all 3s;
+      -moz-transition:all 3s;
+      -o-transition:all 3s;
     }
     &:hover {
-      background: #551700;
+      background: rgba(0, 0, 0, 0.1);
+      transition:all 1s;
+      -webkit-transition:all 1s;
+      -moz-transition:all 1s;
+      -o-transition:all 1s;
     }
   };
 //  color: $patient-portal-text-color;
@@ -556,6 +565,10 @@ ul, li { list-style-type: none; }
 
   }
   
+}
+
+.site-logo {
+  width: 100%;
 }
 
 #site-slogan {

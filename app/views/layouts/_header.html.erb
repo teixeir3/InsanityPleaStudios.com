@@ -4,9 +4,8 @@
       <figure id="logo" class="logo">
         <span class="anchor" id="home"></span>
         <%= link_to root_path(anchor: "home"), class: "anchored", data: {anchor: "#home"} do %>
-          <img class="site-logo" src="<%= image_url("douglas_teixeira_logo_298x59.png") %>" alt="Weight Tracker">
+          <%= image_tag("logo.png", class: "site-logo", alt: "Insanity Plea Studios") %>
         <% end %>
-        <figcaption id="site-slogan">You should <strong>hire me</strong>.</figcaption>
       </figure>
     </div>
   </nav>
@@ -15,7 +14,7 @@
     <div class="container-fluid">
 
       <div class="navbar-header">
-        <a class="navbar-brand navbar-brand-small" href="<%= root_url %>"><%= image_tag("portfolio_logo_small_60x48.png") %></a>
+        <a class="navbar-brand navbar-brand-small" href="<%= root_url %>"><% image_tag("portfolio_logo_small_60x48.png") %></a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
