@@ -1,10 +1,9 @@
 # InsanityPleaStudios.com
+* Home page for Insanity Plea Studios. Insanity Plea studios is an American video game developer located in New Jersey founded by Christopher Diviaio.
 
-My portfolio - :)
 [Live]:http://www.InsanityPleaStudios.com
 
 
 ## TODO
-* Add Features to snakes game
-* Add Demo feature for visiters
-* Add asteroids game
+* Add Standard content
+* Remove coming soon
