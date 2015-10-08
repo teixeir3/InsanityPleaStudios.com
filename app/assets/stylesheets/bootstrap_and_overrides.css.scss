@@ -100,7 +100,7 @@ $font-size-base: 20px;
 }
 
 .row-padding { 
-  padding-top: 30px;
+  padding-top: 60px;
   padding-bottom: 60px;
 //  min-height: 350px;
 }
@@ -231,6 +231,10 @@ figure.figure {
 
 
 // Forms
+.form {
+  max-width: 700px;
+  margin: auto;
+}
 
 .form-group > input[type="submit"] {
   width: 100%;
@@ -351,7 +355,7 @@ footer {
  
  
 body {
-  padding-top: 180px;
+//  padding-top: 180px;
   overflow-x: hidden;
   transition:all 1s;
   -webkit-transition:all 1s;
@@ -562,25 +566,30 @@ ul, li { list-style-type: none; }
   #site-slogan {
 //    color: $brand-primary;
     top: 16px;
-
+    position: relative;
+    top: 0px;
+    transition:all 3s ease-in;
+    -webkit-transition:all 1.5s;
+    -moz-transition:all 1.5s;
+    -o-transition:all 1.5s;
   }
-  
 }
 
 .site-logo {
   width: 100%;
 }
 
-#site-slogan {
-  position: relative;
-  top: 0px;
-  transition:all 3s ease-in;
-  -webkit-transition:all 1.5s;
-  -moz-transition:all 1.5s;
-  -o-transition:all 1.5s;
+#logo-container {
+  padding-top: 200px;
+  &.faded {
+    background: #990000;
+  }
+  h3 {
+    padding: 40px;
+    color: inherit;
+  }
 }
-
-
+ 
 .navbar-brand-big {
   top: -650px;
 }
